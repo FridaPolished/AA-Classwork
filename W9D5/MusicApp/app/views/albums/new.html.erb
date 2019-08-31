@@ -1,0 +1,34 @@
+<h1>Add a new album</h1>
+
+<%if flash[:errors]%>
+<ul>
+    <%flash[:errors].each do |error|%>
+    <li><%=error%></li>
+    <%end%>
+</ul>
+<%end%>
+
+<br>
+
+<form action="<%=albums_url%>" method="POST">
+    <%= auth_token %>
+    <label for="album_title">Album title </label>
+    <input type="text" name="album[title]" id="album_title">
+    
+    <br>
+    <label for="band_name"> Band Name </label>
+    <input type="drop-down" name="band[name]" id="band_name">
+    
+    <br>
+
+   <input type="ratio" name="album[]" value="<%=%>">
+    <br>
+
+    <label for="album_year"> Year </label>
+    <input type="text" name="album[year]" id="album_year">
+    <br>
+
+    <button>Create album</button>
+
+</form>
+

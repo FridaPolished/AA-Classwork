@@ -1,0 +1,31 @@
+<h1>Let's edit the band's information:</h1>
+
+<%if flash[:errors]%>
+<ul>
+    <%flash[:errors].each do |error|%>
+    <li><%=error%></li>
+    <%end%>
+</ul>
+<%end%>
+
+<br>
+
+<form action="<%=band_url(@band)%>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <%= auth_token %>
+    <label for="name">Band name: </label>
+    <input type="text" name="band[name]" id="band_name" value="<%=@band.name%>">
+
+    <br>
+    <button>Save</button>
+</form>
+<br>
+<br>
+Hey! But what if I want to delete this band?
+<form action="<%=band_url(@band)%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <%= auth_token %>
+    <br>
+    <button>Delete</button>
+
+</form>
