@@ -1,0 +1,13 @@
+/* PHASE 2: Notifications */
+
+
+.header-list > li:first-of-type {
+    display: flex;
+}
+
+
+a.badge {
+    background: green;
+    border-radius: 100%;
+    padding: 5px;
+}
