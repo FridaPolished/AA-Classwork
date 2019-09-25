@@ -1,0 +1,25 @@
+.grid {
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  display: grid;
+  grid-template: repeat(8, 1fr) / 1fr;
+  place-items: stretch stretch; 
+  justify-content: stretch;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.tile {
+  border: 1px solid lightgrey;
+  background-color: beige;
+  flex: 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
